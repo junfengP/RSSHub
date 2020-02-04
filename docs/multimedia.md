@@ -118,6 +118,12 @@ pageClass: routes
 
 <Route author="MegrezZhu CoderTonyChan Felix2yu" example="/javbus/western/series/20" path="/javbus/western/series/:seriesid" :paramsDesc="['系列id，详见作品中系列的链接']" />
 
+## JavLibrary
+
+### 用户文章
+
+<Route author="junfengP" example="/javlibrary/userposts/siccalol" path="/javlibrary/userposts/:uid" :paramsDesc="['用户 id，即用户名称']" />
+
 ## Mp4Ba
 
 ### 影视分类
@@ -144,6 +150,24 @@ pageClass: routes
 <Route author="wolfyu1991"  example="/mp4ba/复仇者联盟" path="/mp4ba/:keyword" :paramsDesc="['搜索关键字']" supportBT="1"/>
 
 </Route>
+
+## MQube
+
+### 全站最近更新
+
+<Route author="hoilc" example="/mqube/latest" path="/mqube/latest" radar="1" />
+
+### 全站每日排行
+
+<Route author="hoilc" example="/mqube/top" path="/mqube/top" radar="1" />
+
+### 个人最近更新
+
+<Route author="hoilc" example="/mqube/user/mukamui_v_p" path="/mqube/user/:user" :paramsDesc="['用户 ID, 可以在个人资料页的 URL 中找到']" radar="1" />
+
+### 标签最近更新
+
+<Route author="hoilc" example="/mqube/tag/UTAU" path="/mqube/tag/:tag" :paramsDesc="['标签名称, 可参考`https://mqube.net/search/tag`']" radar="1" />
 
 ## Nyaa
 
@@ -238,6 +262,12 @@ pageClass: routes
 :::
 
 </Route>
+
+## 低端影视
+
+### 影视剧集
+
+<Route author="saintwinkle" example="/ddrk/silicon-valley/6" path="/ddrk/:name/:season?" :paramsDesc="['影视名称，可以在 URL 中找到','季数，可以在 URL 中找到，剧集没有分季时不用填写，或是默认输出第一季的内容，']" />
 
 ## 电影首发站
 
@@ -420,9 +450,3 @@ pageClass: routes
 ### 影视
 
 <Route author="DIYgod" example="/zimuzu/resource/37031" path="/zimuzu/resource/:id?" :paramsDesc="['影视 id，对应影视的 URL 中找到，为空时输出最近更新']" supportBT="1"/>
-
-## 低端影视
-
-### 影视剧集
-
-<Route author="saintwinkle" example="/ddrk/silicon-valley/6" path="/ddrk/:name/:season?" :paramsDesc="['影视名称，可以在 URL 中找到','季数，可以在 URL 中找到，剧集没有分季时不用填写，或是默认输出第一季的内容，']" />

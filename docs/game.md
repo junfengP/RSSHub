@@ -86,6 +86,16 @@ pageClass: routes
 
 </Route>
 
+## Minecraft
+
+### Java 版游戏更新
+
+<Route author="TheresaQWQ" example="/minecraft/version" path="/minecraft/version" />
+
+### CurseForge Mod 更新
+
+<Route author="Indexyz" example="/curseforge/files/jei" path="/curseforge/files/:project" :paramsDesc="['项目的短名或者 `Project ID`. 项目的短名可以在地址栏获取到, 例如地址为 `https://minecraft.curseforge.com/projects/non-update`, 短名就为 `non-update`. `Project ID` 可在 `Overview` 中的 `About This Project` 中找到']"/>
+
 ## Nintendo
 
 ### eShop 新发售游戏
@@ -267,6 +277,12 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 
 <Route author="Astrian" example="/arknights/news" path="/arknights/news"/>
 
+## 网易大神
+
+### 用户发帖
+
+<Route author="luyuhuang" example="/netease/ds/63dfbaf4117741daaf73404601165843" path="/netease/ds/:id" :paramsDesc="['用户ID']"/>
+
 ## 王者荣耀
 
 ### 新闻中心
@@ -339,7 +355,7 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 
 ### 游研社
 
-<Route author="LightStrawberry" example="/yystv/category/:category" path="/yystv/category/:category" :paramsDesc="['专栏类型']">
+<Route author="LightStrawberry" example="/yystv/category/recommend" path="/yystv/category/:category" :paramsDesc="['专栏类型']">
 
 | 推游      | 游戏史  | 大事件 | 文化    | 趣闻 | 经典回顾 |
 | --------- | ------- | ------ | ------- | ---- | -------- |

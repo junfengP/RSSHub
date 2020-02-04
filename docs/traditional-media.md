@@ -96,6 +96,24 @@ Solidot 提供的 feed:
 
 <Route author="xyqfer" example="/the-economist/gre-vocabulary" path="/the-economist/gre-vocabulary" />
 
+## Yahoo
+
+### 新聞
+
+<Route author="KeiLongW" example="/yahoo-news/hk/world" path="/yahoo-news/:region/:category?" :paramsDesc="['地区','类别']">
+
+`地区`
+| 香港 | 台灣 | 美國 |
+| -- | -- | -- |
+| hk | tw | en |
+
+`类別`
+| 新聞總集 | 兩岸國際 | 財經 | 娛樂 | 體育 | 健康 |
+| -- | -- | -- | -- | -- | -- |
+| (空) | world | business | entertainment | sports | health |
+
+</Route>
+
 ## 半月谈
 
 ### 板块
@@ -160,15 +178,15 @@ Category 列表:
 
 <Route author="HenryQW" example="/dwnews/yaowen/global" path="/dwnews/yaowen/:region?" :paramsDesc="['要闻地区，默认`全部`，可选地区如下']">
 
-| 全部   | 国际   | 中国  | 香港     | 台湾   |
-| ------ | ------ | ----- | -------- | ------ |
-| yaowen | global | china | hongkong | taiwan |
+| 全部   | 国际   | 中国  | 香港     | 台湾   | 经济   |
+| ------ | ------ | ----- | -------- | ------ | ------ |
+| yaowen | global | china | hongkong | taiwan | jingji |
 
 </Route>
 
-### 新闻排行榜
+### 24 小时新闻排行榜
 
-<Route author="HenryQW" example="/dwnews/rank/photo/7" path="/dwnews/rank/:type/:range" :paramsDesc="['榜单类型，`news`为普通新闻，`photo`为图集新闻','榜单范围（天），`1` 或 `7`']"/>
+<Route author="HenryQW" example="/dwnews/rank" path="/dwnews/rank"/>
 
 ## 华尔街见闻
 
@@ -302,6 +320,16 @@ category 对应的关键词有
 
 <Route author="LogicJake"  example="/people/xjpjh" path="/people/xjpjh/:keyword?/:year?" :paramsDesc="['关键词，默认不填','年份，默认all']"/>
 
+## 日本経済新聞
+
+### ホームページ
+
+<Route author="zjysdhr" example="/nikkei/index" path="/nikkei/index" radar="1">
+
+日文版首页
+
+</Route>
+
 ## 卫报 The Guardian
 
 通过提取文章全文，以提供比官方源更佳的阅读体验。
@@ -342,6 +370,22 @@ category 对应的关键词有
 
 <Route author="hoilc" example="/hk01/tag/2787" path="/hk01/tag/:id" :paramsDesc="['标签id, 可在URL中找到']"/>
 
+## 香港電台
+
+### 新聞
+
+香港電台官方已有提供全文 RSS，詳細可前往官方網站： <https://news.rthk.hk/rthk/ch/rss.htm>
+
+此路由主要補回官方 RSS 缺少的圖片以及 Link 元素。（官方 RSS 沒有 Link 元素可能導致某些 RSS 客戶端出現問題）
+
+<Route author="KeiLongW" example="/rthk-news/hk/international" path="/rthk-news/:lang/:category" :paramsDesc="['语言，繁体`hk`，英文`en`','类别']">
+
+| local    | greaterchina | international | finance  | sport    |
+| -------- | ------------ | ------------- | -------- | -------- |
+| 本地新聞 | 大中華新聞   | 國際新聞      | 財經新聞 | 體育新聞 |
+
+</Route>
+
 ## 新京报
 
 ### 栏目
@@ -356,7 +400,7 @@ category 对应的关键词有
 
 分类：
 | zx | twhk | dwzw | zrdl | lskg | smyx | shbk | kjqy |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| ---- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
 | 最新 | 天文航空 | 动物植物 | 自然地理 | 历史考古 | 生命医学 | 生活百科 | 科技前沿 |
 
 </Route>
@@ -468,5 +512,27 @@ category 对应的关键词有
 | realtimenews | politic | opinion | life | star | money | society | hottopic | tube    | world | armament | chinese | fashion | sports | technologynews | travel | album |
 | ------------ | ------- | ------- | ---- | ---- | ----- | ------- | -------- | ------- | ----- | -------- | ------- | ------- | ------ | -------------- | ------ | ----- |
 | 即時         | 政治    | 言論    | 生活 | 娛樂 | 財經  | 社會    | 話題     | 快點 TV | 國際  | 軍事     | 兩岸    | 時尚    | 體育   | 科技           | 玩食   | 專輯  |
+
+</Route>
+
+## 中外对话
+
+### 主题
+
+<Route author="zoenglinghou" example="/chinadialogue/topics/cities" path="/chinadialogue/topics/:topic" :paramsDesc="['主题分类']">
+
+| 商业     | 城市化 | 气候变化与能源            | 自然保护     | 管制与法律         | 健康与食品      | 自然灾害          | 污染      | 科学与技术       | 安全     | 水    |
+| -------- | ------ | ------------------------- | ------------ | ------------------ | --------------- | ----------------- | --------- | ---------------- | -------- | ----- |
+| business | cities | climate-change-and-energy | conservation | governance-and-law | health-and-food | natural-disasters | pollution | science-and-tech | security | water |
+
+</Route>
+
+### 栏目
+
+<Route author="zoenglinghou" example="/chinadialogue/article" path="/chinadialogue/:column" :paramsDesc="['栏目分类']">
+
+| 文章    | 博客 | 文化    | 报告    |
+| ------- | ---- | ------- | ------- |
+| article | blog | culture | reports |
 
 </Route>

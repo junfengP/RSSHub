@@ -396,13 +396,7 @@ category 列表：
 
 ### 学校通知
 
-<Route author="vuhe" example="/ncwu/notice" path="/universities/ncwu/:category" :paramsDesc="['分类']" >
-
-| 学校新闻 | 学校通知 | 学校文件 | 学术动态    |
-| -------- | -------- | -------- | ----------- |
-| news     | notice   | file     | scholarship |
-
-</Route>
+<Route author="vuhe" example="/ncwu/notice" path="/universities/ncwu/notice"/>
 
 ## 华南理工大学
 
@@ -609,6 +603,18 @@ category 列表：
 | 通知公告 | 学术公告 |
 | -------- | -------- |
 | 1        | 2        |
+
+</Route>
+
+## 南京林业大学
+
+### 教务处
+
+<Route author="kiusiudeng" example="/njfu/jwc/1798" path="/universities/njfu/jwc/:category?" :paramsDesc="['省略则默认为1799']">
+
+| 校级发文 | 通知公告 | 上级发文 | 下载专区 |
+| -------- | -------- | -------- | -------- |
+| 1798     | 1799     | 2270     | 1797     |
 
 </Route>
 
@@ -865,6 +871,10 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 | students       | news     | notice   | operation | affairs  | yjb    | jgb    | zhb    | party      |
 
 </Route>
+
+### 同去网最新活动
+
+<Route author="SeanChao" example="/sjtu/tongqu" path="/universities/sjtu/tongqu"/>
 
 ## 上海科技大学
 
