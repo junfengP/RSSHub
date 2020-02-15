@@ -43,6 +43,12 @@ pageClass: routes
 
 <Route author="ntzyz" example="/dhl/12345678" path="/dhl/:shipment_id" :paramsDesc="['运单号']"/>
 
+## HackerOne
+
+### HackerOne Hacker Activity
+
+<Route author="imlonghao" example="/hackerone/hacktivity" path="/hackerone/hacktivity" radar="1"/>
+
 ## Instapaper
 
 ### 个人分享
@@ -423,6 +429,10 @@ type 为 all 时，category 参数不支持 cost 和 free
 | 中文 | 英文 | 葡文 |
 | ---- | ---- | ---- |
 | ch   | en   | pt   |
+
+### Singapore Ministry of Health - Past Updates on 2019-nCov Local Situation in Singapore
+
+<Route author="Gnnng" example="/coronavirus/sg-moh" path="/coronavirus/sg-moh"/>
 
 ## 新趣集
 
