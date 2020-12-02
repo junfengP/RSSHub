@@ -112,6 +112,18 @@ pageClass: routes
 
 <Route author="GensouSakuya kt286" example="/indienova/article" path="indienova/:type" :paramsDesc="['类型: `article` 文章，`development` 开发']"/>
 
+## Konami
+
+### PES Mobile 公告
+
+<Route author="HenryQW" example="/konami/pesmobile/zh-cn/ios" path="/konami/pesmobile/:lang?/:os?" :paramsDesc="['语言，在URL中获得，如zh-cn, zh-tw, en', '操作系统，iOS 或 Android']"/>
+
+## Liquipedia
+
+### Dota2 战队最近比赛结果
+
+<Route author="wzekin" example="/liquipedia/dota2/matches/Team_Aster" path="liquipedia/dota2/matches/:id" :paramsDesc="['战队名称，可在url中找到。例如:https://liquipedia.net/dota2/Team_Aster']"/>
+
 ## Maxjia News
 
 ### Dota 2
@@ -310,6 +322,15 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 
 </Route>
 
+## 触乐
+
+<Route author="laampui" example="/chuapp/index/daily" path="/chuapp/index/:category?" :paramsDesc="['默认为 night']">
+
+| 每日聚焦 | 最好玩 | 触乐夜话 | 动态资讯 |
+| -------- | ------ | -------- | -------- |
+| daily    | pcz    | night    | news     |
+
+</Route>
 ## 二柄 APP
 
 ### 新闻
@@ -500,7 +521,7 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 
 ## 游研社
 
-### 游研社
+### 游研社 - 分类文章
 
 <Route author="LightStrawberry" example="/yystv/category/recommend" path="/yystv/category/:category" :paramsDesc="['专栏类型']">
 
@@ -509,6 +530,10 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 | recommend | history | big    | culture | news | retro    |
 
 </Route>
+
+### 游研社 - 全部文章
+
+<Route author="HaitianLiu" example="/yystv/docs" path="/yystv/docs" />
 
 ## 原神
 
