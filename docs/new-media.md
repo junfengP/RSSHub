@@ -90,6 +90,24 @@ pageClass: routes
 
 <Route author="nczitzk" example="/aljazeera/news" path="/aljazeera/news"/>
 
+## ASML 阿斯麦
+
+### Press releases & announcements
+
+<Route author="nczitzk" example="/asml/press-releases" path="/asml/press-releases"/>
+
+## Bell Labs
+
+### Event and News
+
+<Route author="nczitzk" example="/bell-labs/events-news" path="/bell-labs/events-news/:category?" :paramsDesc="['分类，见下表，默认为 Press releases']">
+
+| Featured events | Latest recognition   | Press releases |
+| --------------- | -------------------- | -------------- |
+| events          | industry-recognition | press-releases |
+
+</Route>
+
 ## BOF
 
 ### 首页
@@ -116,13 +134,31 @@ pageClass: routes
 
 ### 最新
 
-<Route author="kt286" example="/cnbeta" path="/cnbeta"/>
+<Route author="kt286 HaitianLiu" example="/cnbeta" path="/cnbeta"/>
+
+## Day One
+
+### Blog
+
+<Route author="nczitzk" example="/dayone/blog" path="/dayone/blog"/>
 
 ## DeepL
 
 ### Blog
 
 <Route author="nczitzk" example="/deepl/blog" path="/deepl/blog/:lang?" :paramsDesc="['语言，可选 `en` 指 英语 和 `zh` 指 汉语，默认为 en']"/>
+
+## DeepMind
+
+### Blog
+
+<Route author="nczitzk" example="/deepmind/blog" path="/deepmind/blog/:category?" :paramsDesc="['分类，见下表']">
+
+| All | Podcasts | Research | News |
+| --- | -------- | -------- | ---- |
+|     | Podcasts | Research | News |
+
+</Route>
 
 ## Deutsche Welle 德国之声
 
@@ -140,9 +176,9 @@ pageClass: routes
 
 <Route author="HenryQW" example="/donews" path="/donews/:column?" :paramsDesc="['栏目代码, 默认为首页.']">
 
-| 首页 | 商业    | 创业     | 互娱 | 科技       | 专栏    |
-| ---- | ------- | -------- | ---- | ---------- | ------- |
-| (空) | company | business | ent  | technology | idonews |
+| 首页 | 商业    | 创业     | 互娱 | 科技    | 专栏    |
+| ---- | ------- | -------- | ---- | ------- | ------- |
+| (空) | company | business | ent  | digital | idonews |
 
 </Route>
 
@@ -231,6 +267,12 @@ Tag
 ### Posts
 
 <Route author="loganrockmore" example="/grubstreet" path="/grubstreet" />
+
+## iDaily 每日环球视野
+
+### 今日 Timeline
+
+<Route author="zphw" example="/idaily/today" path="/idaily/today" />
 
 ## iDownloadBlog
 
@@ -423,6 +465,12 @@ IPFS 网关有可能失效，那时候换成其他网关。
 
 <Route author="SChen1024" example="/pmcaff/user/Oak7mqnEQJ" path="/pmcaff/user/:userid" :paramsDesc="['用户 id, 用户界面对应的 URL 最后面的字符']"/>
 
+## Polar
+
+### Blog
+
+<Route author="nczitzk" example="/polar/blog" path="/polar/blog"/>
+
 ## Quanta Magazine
 
 ### 全部
@@ -490,6 +538,18 @@ IPFS 网关有可能失效，那时候换成其他网关。
 -   Soomal 提供官方 RSS 订阅
     -   Soomal 网站更新：<http://www.soomal.com/doc/101.rss.xml>
     -   Soomal 论坛与留言系统的更新：<http://www.soomal.com/bbs/101.rss.xml>
+
+</Route>
+
+## The Brain
+
+### Blog
+
+<Route author="nczitzk" example="/thebrain/blog" path="/thebrain/blog/:category?" :paramsDesc="['分类, 见下表，默认为 Blog']">
+
+| Blog | Recorded Events | Big Thinkers |
+| ---- | --------------- | ------------ |
+| blog | recorded-events | big-thinkers |
 
 </Route>
 
@@ -623,6 +683,16 @@ Supported sub-sites:
 ### 分类
 
 <Route author="emdoe" example="/twreporter/category/reviews" path="/twreporter/category/:tid" :paramsDesc="['分类（议题）名称，于主页获取']"/>
+
+## 北屋
+
+<Route author="nczitzk" example="/northhouse" path="/northhouse/:category?" :paramsDesc="['分类，见下表，默认为首页']">
+
+| 首页 | 最新资讯和灾难信息 | 生存主义 survival | 运动户外 | 玩物尚志 | 分享下载 | 知行生活 | 商务服务 |
+| ---- | ------------------ | ----------------- | -------- | -------- | -------- | -------- | -------- |
+|      | 最新资讯和灾难信息 | 生存主义 survival | 运动户外 | 玩物尚志 | 分享下载 | 知行生活 | 商务服务 |
+
+</Route>
 
 ## 本地宝
 
@@ -792,6 +862,69 @@ area 分区选项
 
 <Route author="HenryQW" example="/dongqiudi/player_news/50000339" path="/dongqiudi/player_news/:id" :paramsDesc="['球员 id, 可在[懂球帝数据](https://www.dongqiudi.com/data)中通过其队伍找到']"/>
 
+## 东西智库
+
+### 分类
+
+<Route author="nczitzk" example="/dx2025" path="/dx2025/:type?/:category?" :paramsDesc="['内容类别，见下表，默认为空', '行业分类，见下表，默认为空']">
+
+内容类别
+
+| 产业观察             | 行业报告         | 政策 & 成效        |
+| -------------------- | ---------------- | ------------------ |
+| industry-observation | industry-reports | policy-achievement |
+
+行业分类
+
+| 行业                 | 行业名称                                                          |
+| -------------------- | ----------------------------------------------------------------- |
+| 新一代信息技术       | next-generation-information-technology-industry-reports           |
+| 高档数控机床和机器人 | high-grade-cnc-machine-tools-and-robots-industry-reports          |
+| 航空航天装备         | aerospace-equipment-industry-reports                              |
+| 海工装备及高技术船舶 | marine-engineering-equipment-and-high-tech-ships-industry-reports |
+| 先进轨道交通装备     | advanced-rail-transportation-equipment-industry-reports           |
+| 节能与新能源汽车     | energy-saving-and-new-energy-vehicles-industry-reports            |
+| 电力装备             | electric-equipment-industry-reports                               |
+| 农机装备             | agricultural-machinery-equipment-industry-reports                 |
+| 新材料               | new-material-industry-reports                                     |
+| 生物医药及医疗器械   | biomedicine-and-medical-devices-industry-reports                  |
+| 现代服务业           | modern-service-industry-industry-reports                          |
+| 制造业人才           | manufacturing-talent-industry-reports                             |
+
+</Route>
+
+### 标签
+
+<Route author="nczitzk" example="/dx2025/tag/3d_printing" path="/dx2025/tag/:category" :paramsDesc="['标签分类，见下表，默认为空']">
+
+| 分类       | 分类名                            | 分类           | 分类名                    |
+| ---------- | --------------------------------- | -------------- | ------------------------- |
+| 3D 打印    | 3d_printing                       | 大数据         | dashuju                   |
+| 5G         | 5g                                | 大湾区         | d_w_q                     |
+| AI         | AI                                | 宏观经济       | macro_economy             |
+| 世界经济   | world_economy                     | 工业互联网     | industrial_internet       |
+| 云计算     | cloud_computing                   | 工业软件       | g_y_r_j                   |
+| 人工智能   | rengongzhineng                    | 数字化转型     | digital_transformation    |
+| 人才       | personnel                         | 数字孪生       | digital_twin              |
+| 企业研究   | enterprise_research               | 数字经济       | digital_economy           |
+| 信息安全   | information_safety                | 数字货币       | digital-currency          |
+| 创新       | innovate                          | 数据中心       | data_center               |
+| 制造业     | manufacturing                     | 数据安全       | data_security             |
+| 动力电池   | power_battery                     | 新一代信息技术 | x_y_d_x_x_j_s             |
+| 区块链     | qukuailian                        | 新基建         | new_infrastructure        |
+| 医疗器械   | medical_apparatus_and_instruments | 新材料         | x_c_l                     |
+| 半导体芯片 | semiconductor_chip                | 新能源         | x_n_y                     |
+| 新能源汽车 | new_energy_vehicles               | 智能制造       | intelligent_manufacturing |
+| 机器人     | robot                             | 机床           | machine_tool              |
+| 海工装备   | marine_engineering_equipment      | 物联网         | wulianwang                |
+| 现代服务   | x_d_f_w                           | 生物医药       | biomedicine               |
+| 电力装备   | electric_equipment                | 网络安全       | wangluoanquan             |
+| 航空航天   | aerospace                         | 虚拟现实       | virtual_reality           |
+| 装备制造业 | equipment_manufacturing_industry  | 赋能           | empowerment               |
+| 轨道交通   | rail_transit                      |                |                           |
+
+</Route>
+
 ## 多知网
 
 ### 首页
@@ -915,6 +1048,30 @@ others = 热点新闻 + 滚动新闻
 | info     | creative |
 
 </Route>
+
+## 国际教育研究所
+
+### Blog
+
+<Route author="nczitzk" example="/iie/blog" path="/iie/blog" />
+
+## 国际能源署
+
+### 新闻及活动
+
+<Route author="nczitzk" example="/iea/news-and-events" path="/iea/:category?" :paramsDesc="['分类，见下表，默认为 Featured']">
+
+| Featured        | News | Calendar | Past events |
+| --------------- | ---- | -------- | ----------- |
+| news-and-events | news | calendar | past-events |
+
+</Route>
+
+## 国际数学联合会
+
+### 菲尔兹奖
+
+<Route author="nczitzk" example="/mathunion/fields-medal" path="/mathunion/fields-medal"/>
 
 ## 果壳网
 
@@ -1066,6 +1223,12 @@ others = 热点新闻 + 滚动新闻
 
 </Route>
 
+## 九三学社
+
+### 分类
+
+<Route author="nczitzk" example="/93/lxzn-yzjy" path="/93/:category?" :paramsDesc="['分类，可在对应分类页的 URL 中找到']"/>
+
 ## 巨潮资讯
 
 <Route author="LogicJake hillerliao laampui nczitzk" example="/cninfo/announcement/szse/000002/gssz0000002/category_ndbg_szsh" path="/cninfo/announcement/:column/:code/:orgId/:category?/:search?" :paramsDesc="['szse 深圳证券交易所; sse 上海证券交易所; third 新三板; hke 港股; fund 基金', '股票或基金代码', 'orgId 组织 id', '公告分类，A 股及新三板，见下表，默认为全部', '标题关键字，默认为空']">
@@ -1113,6 +1276,32 @@ column 为 third 时可选的 category:
 | 全部 | 文章    | Podcast |
 | ---- | ------- | ------- |
 | all  | article | podcast |
+
+</Route>
+
+## 科学网
+
+### 博客
+
+<Route author="nczitzk" example="/sciencenet/blog" path="/sciencenet/blog/:type?/:time?/:sort?" :paramsDesc="['类型，见下表，默认为推荐', '时间，见下表，默认为所有时间', '排序，见下表，默认为按发表时间排序']">
+
+类型
+
+| 精选      | 最新 | 热门 |
+| --------- | ---- | ---- |
+| recommend | new  | hot  |
+
+时间
+
+| 36 小时内精选博文 | 一周内精选博文 | 一月内精选博文 | 半年内精选博文 | 所有时间精选博文 |
+| ----------------- | -------------- | -------------- | -------------- | ---------------- |
+| 1                 | 2              | 3              | 4              | 5                |
+
+排序
+
+| 按发表时间排序 | 按评论数排序 | 按点击数排序 |
+| -------------- | ------------ | ------------ |
+| 1              | 2            | 3            |
 
 </Route>
 
@@ -1178,6 +1367,18 @@ column 为 third 时可选的 category:
 | 最新 | 推薦 | 熱門 |
 | ---- | ---- | ---- |
 | 1    | 2    | 3    |
+
+</Route>
+
+## 美国大学和雇主协会
+
+### 博客
+
+<Route author="nczitzk" example="/nace/blog" path="/nace/blog/:sort?" :paramsDesc="['排序，见下表，默认为 Most Recent']">
+
+| Most Recent | Top Rated | Most Read     |
+| ----------- | --------- | ------------- |
+|             | top-blogs | mostreadblogs |
 
 </Route>
 
@@ -1504,6 +1705,16 @@ column 为 third 时可选的 category:
 
 </Route>
 
+## 晚点 LatePost
+
+<Route author="HaitianLiu nczitzk" example="/latepost" path="/latepost/:proma?" :paramsDesc="['栏目 id，见下表，默认为最新报道']">
+
+| 最新报道 | 晚点独家 | 人物访谈 | 晚点早知道 | 长报道 |
+| -------- | -------- | -------- | ---------- | ------ |
+|          | 1        | 2        | 3          | 4      |
+
+</Route>
+
 ## 万联网
 
 ### 资讯
@@ -1515,6 +1726,12 @@ column 为 third 时可选的 category:
 | (空) | My01     | My02     | My03     | My04     |
 
 </Route>
+
+## 網路天文館
+
+### 天象預報
+
+<Route author="nczitzk" example="/tam/forecast" path="/tam/forecast"/>
 
 ## 网易号
 
@@ -1656,6 +1873,30 @@ column 为 third 时可选的 category:
 
 <Route author="xyqfer" example="/wechat/miniprogram/plugins" path="/wechat/miniprogram/plugins" />
 
+## 无产者评论
+
+### 分类
+
+<Route author="nczitzk" example="/proletar" path="/proletar/categories/:id?" :paramsDesc="['分类，见下表，默认为全部文章']">
+
+| 全部文章 | 中流击水 | 革命文艺 | 当代中国 | 理论视野 | 国际观察 | 史海沉钩 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+|          | 中流击水 | 革命文艺 | 当代中国 | 理论视野 | 国际观察 | 史海沉钩 |
+
+</Route>
+
+### 标签
+
+<Route author="nczitzk" example="/proletar" path="/proletar/tags/:id?" :paramsDesc="['标签，默认为全部文章']">
+
+::: tip 提示
+
+标签名参见 [所有标签](https://review.proletar.ink/tags)
+
+:::
+
+</Route>
+
 ## 西祠胡同
 
 ### 频道
@@ -1667,6 +1908,12 @@ column 为 third 时可选的 category:
 | (空)     | ms   | qg   | qz   |
 
 </Route>
+
+## 橡树岭国家实验室
+
+### 新闻
+
+<Route author="nczitzk" example="/ornl/news" path="/ornl/news"/>
 
 ## 香水时代
 
@@ -1767,6 +2014,20 @@ column 为 third 时可选的 category:
 
 </Route>
 
+## 有趣天文奇观
+
+### 首页
+
+<Route author="nczitzk" example="/interesting-sky" path="/interesting-sky"/>
+
+### 年度天象（天文年历）
+
+<Route author="nczitzk" example="/interesting-sky/astronomical_events" path="/interesting-sky/astronomical_events/:year?" :paramsDesc="['年份，默认为当前年份']"/>
+
+### 近期事件专题
+
+<Route author="nczitzk" example="/interesting-sky/recent-interesting" path="/interesting-sky/recent-interesting"/>
+
 ## 遠見
 
 <Route author="laampui" example="/gvm/index/health" path="/gvm/index/:category?" :paramsDesc="['見下表, 默認爲 newest']">
@@ -1776,6 +2037,55 @@ column 为 third 时可选的 category:
 | newest   | recommend    | opinion  | topic | news     | politics | society | figure   | world | world_focus | cross_strait_politics | money    | investment | insurance | retire   | fintech      | real_estate | economy  | tech | tech_trend | energy | business | industry | service  | medical  | family_business_succession | startup  | management | agriculture | education | higher_education | technological | parent   | world_education | sports | life     | art      | self_growth | film     | travel | environment | health | food | career   | survey | county | csr |
 
 </Route>
+
+## 中国计算机学会
+
+### 新闻
+
+<Route author="nczitzk" example="/ccf/news" path="/ccf/news/:category?" :paramsDesc="['分类，见下表，默认为 CCF 新闻']">
+
+| CCF 新闻   | CCF 聚焦 | ACM 信息 |
+| ---------- | -------- | -------- |
+| Media_list | Focus    | ACM_News |
+
+</Route>
+
+## 中国机械工程学会
+
+### 学会新闻
+
+<Route author="nczitzk" example="/cmes/news" path="/cmes/news/:category?" :paramsDesc="['分类，见下表，默认为 学会要闻']">
+
+| 学会要闻    | 学会动态 | 科技新闻 |
+| ----------- | -------- | -------- |
+| Information | Dynamics | TechNews |
+
+</Route>
+
+## 中国科学院青年创新促进会
+
+### 最新博文
+
+<Route author="nczitzk" example="/yicas/blog" path="/yicas/blog"/>
+
+## 中国劳工观察
+
+### 调查报告
+
+<Route author="nczitzk" example="/chinalaborwatch/reports" path="/chinalaborwatch/reports/:lang?/:industry?" :paramsDesc="['语言，默认为英语，可选 `cn` 即 简体中文', '行业 id，见下表，默认为全部']">
+
+| 全部 | 制鞋 | 印刷 | 厨具 | 家具 | 服饰 | 汽车制造 | 玩具 | 电子产品 | 综合 | 零售 |
+| ---- | ---- | ---- | ---- | ---- | ---- | -------- | ---- | -------- | ---- | ---- |
+|      | 2    | 6    | 14   | 3    | 4    | 10       | 8    | 1        | 9    | 7    |
+
+</Route>
+
+## 中国劳工通讯
+
+### 评论与特写
+
+<Route author="nczitzk" example="/clb/commentary" path="/clb/commentary/:lang?" :paramsDesc="['语言，默认为简体中文，可选 `en` 即英文']"/>
+
 ## 装备前线
 
 ### 首页最新帖子
