@@ -2194,6 +2194,28 @@ type 列表：
 
 </Route>
 
+## 重庆理工大学
+
+### 学校通知
+
+<Route author="Colin-XKL" example="/cqut/news" path="/cqut/news" radar="1"/>
+
+### 图书馆通知
+
+<Route author="Colin-XKL" example="/cqut/libnews" path="/cqut/libnews" radar="1"/>
+
+## 重庆文理学院
+
+### 通知公告
+
+<Route author="Fatpandac" example="/cqwu/news/academiceve" path="/cqwu/news/:type?" :paramsDesc="['可选，默认为 academiceve ']" radar="1">
+
+| 通知公告 | 学术活动公告 |
+| -------- | ------------ |
+| notify   | academiceve  |
+
+</Route>
+
 ## 中山大学
 
 ### 数据科学与计算机学院动态
