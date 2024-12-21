@@ -4300,7 +4300,7 @@
         source:[ "/" ],
         target:"/dykszx/news/all" } ] },
   "ygdy8.net":{ _name:"电影天堂",
-    ".":[ { title:"电影天堂",
+    ".":[ { title:"最新电影",
         docs:"https://docs.rsshub.app/routes/multimedia",
         source:[ "/index.html" ],
         target:"/dytt/" } ] },
